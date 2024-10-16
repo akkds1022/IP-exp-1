@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+</head>
+<body bgcolor="beige" align="center">
+
+    <!-- Header Section -->
+    <header>
+        <img src="logo.jpeg" alt="Company Logo" width="100">
+        <font color="brown">
+        <h1>DJ Tees</h1>
+    </font>
+        <font color="red">
+            <i><p>" Let your tees do the talking"</p></i>
+        </font>
+    </header>
+
+    <!-- Main Content Section -->
+    <div align="center">
+        <h2>Place Your Order</h2>
+        <form action="/submit-order" method="post">
+            <!-- Tagline and Color Section in One Row -->
+            <table>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Tagline on the Shirt</legend>
+                            <label for="tagline">Enter your tagline:</label>
+                            <input type="text" id="tagline" name="tagline" placeholder="Enter tagline here" required>
+
+                          
+
+                            <legend>Select T-Shirt Color</legend>
+                            <label for="color">Choose a color:</label>
+                            <select id="color" name="color" required>
+                                <option value="">Select color</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                            </select>
+
+                            <legend>Select T-Shirt Size</legend>
+                            <label for="size">Choose a size:</label>
+                            <select id="size" name="size" required>
+                                <option value="">Select size</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                                <option value="xlarge">X-Large</option>
+                            </select>
+                        </fieldset>
+
+
+                    </td>
+                    <td>
+                        <fieldset>
+
+                            <legend>Specify Quantity</legend>
+                            <label for="quantity">Enter quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+
+                            <legend>Select Delivery Date</legend>
+                            <label for="delivery-date">Choose delivery date:</label>
+                            <input type="date" id="delivery-date" name="delivery-date" required>
+                            
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+
+
+         
+
+            <!-- Delivery Details Section -->
+            <fieldset>
+                <legend>Delivery Details</legend>
+                <label for="recipient-name">Recipient's Name:</label>
+                <input type="text" id="recipient-name" name="recipient-name" placeholder="Recipient's name" required><br>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Delivery address" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" pattern="[0-9]{10}" required><br>
+            </fieldset>
+
+            <!-- Additional Comments Section -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Any special instructions:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments here"></textarea>
+            </fieldset>
+
+            <!-- Submit and Reset Buttons -->
+            <div>
+                <button type="submit">Submit Order</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
